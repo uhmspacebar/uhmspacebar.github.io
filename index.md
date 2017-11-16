@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Table of contents
 
 * [About UHM SpaceBar](#about-uhmspacebar)
