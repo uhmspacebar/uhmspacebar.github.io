@@ -4,11 +4,11 @@ layout: default
 # Table of contents
 
 * [About UHM SpaceBar](#about-uhmspacebar)
-
+* [Milestones](#milestones)
 
 # About UHMSpaceBar
 
-UHM Spacebar is how University of Hawaii at Manoa students can get connected with any RIO/non-RIO club on campus. When accessing the meteor application, the following landing page appears:
+[UHM Spacebar](http://uhmspacebar.meteorapp.com) is how University of Hawaii at Manoa students can get connected with any RIO/non-RIO club on campus. When accessing the meteor application, the following landing page appears:
 
 [Landing Page](http://uhmspacebar.meteorapp.com)
 
@@ -30,3 +30,14 @@ We will also provide users to find new clubs that they are interested in. We wil
 ![](images/registerpagemock.jpg)
 
 For new or existing clubs that would like to sign up on UHMSpaceBar, they can access the Register New Club page. This will prompt them with a form to fill out. This will add new clubs to the database. There are a few fields in the register period in attempt to reduce friction of onboarding. Users can/will be prompted to add more personalization while using the web application.
+
+# Milestones
+- [Milestone 1](https://github.com/uhmspacebar/uhmspacebar/projects/1)
+  In this milestone, we've accomplished to initialize and successfully deploy our application to galaxy.
+  What we have done:
+  - Mockup Login Page
+  - Mockup Register Club Page
+  - Mockup Filter Page
+  - Download and Initialize Our Project from Bowfolio
+
+- [Milestone 2](https://github.com/uhmspacebar/uhmspacebar/projects/2)
