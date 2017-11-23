@@ -31,6 +31,12 @@ We will also provide users to find new clubs that they are interested in. We wil
 
 For new or existing clubs that would like to sign up on UHMSpaceBar, they can access the Register New Club page. This will prompt them with a form to fill out. This will add new clubs to the database. There are a few fields in the register period in attempt to reduce friction of onboarding. Users can/will be prompted to add more personalization while using the web application.
 
+[Club Admin Page](http://uhmspacebar.meteorapp.com/nn4/Club_Admin)
+![](images/clubadminpage.png)
+
+After you register you are able to access your club admin page. This will show you infographs of how your club is faring based on some information you input.
+
+
 # Milestones
 - [Milestone 1](https://github.com/uhmspacebar/uhmspacebar/projects/1)
 
