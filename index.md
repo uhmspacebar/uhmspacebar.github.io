@@ -33,11 +33,5 @@ For new or existing clubs that would like to sign up on UHMSpaceBar, they can ac
 
 # Milestones
 - [Milestone 1](https://github.com/uhmspacebar/uhmspacebar/projects/1)
-  In this milestone, we've accomplished to initialize and successfully deploy our application to galaxy.
-  What we have done:
-  - Mockup Login Page
-  - Mockup Register Club Page
-  - Mockup Filter Page
-  - Download and Initialize Our Project from Bowfolio
 
 - [Milestone 2](https://github.com/uhmspacebar/uhmspacebar/projects/2)
