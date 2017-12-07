@@ -4,6 +4,7 @@ layout: default
 # Table of contents
 
 * [About UHM SpaceBar](#about-uhmspacebar)
+* [Installation](#installation)
 * [Milestones](#milestones)
 
 # About UHMSpaceBar
@@ -35,6 +36,27 @@ For new or existing clubs that would like to sign up on UHMSpaceBar, they can ac
 ![](images/clubadminpage.png)
 
 After you register you are able to access your club admin page. This will show you infographs of how your club is faring based on some information you input.
+
+
+# Installation
+
+First, [install Meteor](https://www.meteor.com/install).
+
+Second, [download a copy of UHMSpacebar](https://github.com/uhmspacebar/uhmspacebar), or clone it using git.
+  
+Third, cd into the app/ directory and install libraries with:
+
+```
+$ meteor npm install
+```
+
+Fourth, run the system with:
+
+```
+$ meteor npm run start
+```
+
+If all goes well, the application will appear at [http://localhost:3000](http://localhost:3000). If you have an account on the UH test CAS server, you can login.
 
 
 # Milestones
