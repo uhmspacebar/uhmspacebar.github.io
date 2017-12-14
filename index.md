@@ -13,7 +13,7 @@ layout: default
 
 [Landing Page](http://uhmspacebar.meteorapp.com)
 
-![](images/landingpagemock.jpg)
+![](images/landingPage.jpg)
 
 We will be providing UHM members the ability to login through CAS login. After authenticating the UH login the user is then prompted to make a user profile
 
