@@ -363,7 +363,11 @@ Some known bugs that we have with our application reside in the club admin page.
 
 Also the profile page should have more information on it but again we were unable to get to that part of the project. There should be a feed that shows any upcoming events for clubs that a user is a part of. 
 
-One bug that we ran into was the fact that Chart.js does not like to rerender when we leave a template. Currently we have Meteor render Chart.js through the Template onRendered function. However, when navigating away from the project and returning the template will not rerun the onRendered function and the DOM won't be manipulated. As a quick fix the user experience will auto-refresh the page. This is bad because it creates latency within the product, yet currently this is unavoidable.
+One bug that we ran into was the fact that Chart.js does not like to rerender when we leave a template. Currently we have Meteor render Chart.js through the Template onRendered function. However, when navigating away from the project and returning the template will not rerun the onRendered function and the DOM won't be manipulated. As a quick fix the user experience will auto-refresh the page. This is bad because it creates latency within the product, yet currently this is unavoidable. 
+
+We also found out that by having the page reload Safari is unable to access the club admin page. All testing should be done on Google Chrome.
+
+Another issue that was found was that the video playing on the landing page will not load in Google Chrome Canary. The video is able to load on Google Chrome and Safari so there may be no concern for most users.
 
 #Future Features
 
@@ -374,11 +378,19 @@ If time is permitting, it would be nice to add the remaining functionality left 
 The application was tried by the following five people: Jaimie Obatake, Kyle Chan, Jonathan Lau, Arnold Shek, and Akira Vernon. The following comments were made.
 
 ### Good Feedback
+* Straight forward application, easy to see how to traverse 
+* Good design. Catches the eye
 
+### Needs Improvement
+Overall there was one complaint that was made.
 
-### Needs improvement
+* The navigation bar is hard to understand since there is no labels unless you click on it. You should make it on hover
+
+As a response to this comment, we had fixed the user bar to show labels on hover which was done in [Issue 42](https://github.com/uhmspacebar/uhmspacebar/issues/42)
 
 #Special Thanks
+
+Special thanks to Dr. Phillip Johnson for providing us with the base code Bowfolios. Without this framework, we would not have been able to complete the project. We also thank the creators of Chart.js. 
 
 #Contact Us
 Developers of UHM Spacebar: Kevin Cho, Jonathan Nguyen, Aaron Nonaka, Paulo Lemus
