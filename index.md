@@ -19,6 +19,7 @@ layout: default
     - [ESLint](#eslint)
     - [Data Models Unit Tests](#Data-models-unit-tests)
 - [Milestones](#milestones)
+  - [Mock Ups](#mock-ups)
   - [Milestone 1](#milestone-1)
   - [Milestone 2](#milestone-2)
 
@@ -39,24 +40,35 @@ UHM Spacebar brings together clubs across campus to circulate information to the
 We will be providing UHM members the ability to login through CAS login. After authenticating the UH login the user is then prompted to make a user profile
 
 [Profile Page](http://uhmspacebar.meteorapp.com/nn4/profile)
-![](images/userprofilemock.jpg)
+![](images/profile_page.png)
 
-This is what a standard user profile will look like after creating. They will be able to have a feed of upcoming events for clubs that they add to their watchlist and can filter the upcoming events based on club. It will also show a description of the events. They are also able to edit any of their information here.
+This is what a standard user profile will look like after creating. They will be able to have a feed of upcoming events for clubs that they add to their watchlist and can filter the upcoming events based on club. It will also show a description of the events. They are also able to edit any of their information here. 
+
+This page is also an authentication factor for many of the other pages on the web application. Many aspects of the website depend on the creation of a user profile such as defining a profile image and major. These attributes are important in creating a custom user profile and providing information to club admins who would like to know more information about their pending members.
+
+At all times a user can edit their information by going to the top right which shows the user's name. A drop down menu will appear which will allow a user to return back to the edit profile form.
+
+[User Profile Page]()
+![](images/UserProfileFinal.png)
+This is what a standard user profile would look like. On the right there would be a list of clubs and events in feed format for a user to keep track of. This is similar to a Facebook feed. This functionality was not able to be completed.
+
 
 [Filter Page](http://uhmspacebar.meteorapp.com/nn4/filter)
-![](images/filterpagemock.jpg)
+![](images/filterpagefinal.png)
 
-We will also provide users to find new clubs that they are interested in. We will show various club options on the left side of the screen and allow users to filter based on personal preferences. Each club will have a json value associated with their name (string comparison), club type, club size, and major affiliation (macro values).
+We will also provide users to find new clubs that they are interested in. We will show various club options on the left side of the screen and allow users to filter based on personal preferences. Each club will have a json value associated with their name (string comparison), club type, club size, and major affiliation (macro values). They also have the option of joining a club on this page. 
 
 [Club Register](http://uhmspacebar.meteorapp.com/nn4/Club_Register)
-![](images/registerpagemock.jpg)
+![](images/Clubregisterfinal.png)
 
 For new or existing clubs that would like to sign up on UHMSpaceBar, they can access the Register New Club page. This will prompt them with a form to fill out. This will add new clubs to the database. There are a few fields in the register period in attempt to reduce friction of onboarding. Users can/will be prompted to add more personalization while using the web application.
 
 [Club Admin Page](http://uhmspacebar.meteorapp.com/nn4/Club_Admin)
-![](images/clubadminpage.png)
+![](images/clubadminfinal.png)
 
 After you register you are able to access your club admin page. This will show you infographs of how your club is faring based on some information you input.
+
+This would also show you where pending requests, current members, and a modal for contact information would appear. Unfortunately, we were unable to get to that part of the web application.
 
 
 # Installation
@@ -301,10 +313,31 @@ Load the app in a browser to run client tests, or set the TEST_BROWSER_DRIVER en
 # Milestones
 The following section will outline the work that was done for both milestones.
 
+# Mock ups
+
 # Milestone 1
 - [Milestone 1](https://github.com/uhmspacebar/uhmspacebar/projects/1)
 
-Hello.
+[Profile Page](http://uhmspacebar.meteorapp.com/nn4/profile)
+![](images/userprofilemock.jpg)
+
+This is what a standard user profile will look like after creating. They will be able to have a feed of upcoming events for clubs that they add to their watchlist and can filter the upcoming events based on club. It will also show a description of the events. They are also able to edit any of their information here. 
+
+[Filter Page](http://uhmspacebar.meteorapp.com/nn4/filter)
+![](images/filterpagemock.jpg)
+
+We will also provide users to find new clubs that they are interested in. We will show various club options on the left side of the screen and allow users to filter based on personal preferences. Each club will have a json value associated with their name (string comparison), club type, club size, and major affiliation (macro values).
+
+[Club Register](http://uhmspacebar.meteorapp.com/nn4/Club_Register)
+![](images/registerpagemock.jpg)
+
+For new or existing clubs that would like to sign up on UHMSpaceBar, they can access the Register New Club page. This will prompt them with a form to fill out. This will add new clubs to the database. There are a few fields in the register period in attempt to reduce friction of onboarding. Users can/will be prompted to add more personalization while using the web application.
+
+[Club Admin Page](http://uhmspacebar.meteorapp.com/nn4/Club_Admin)
+![](images/clubadminpage.png)
+
+After you register you are able to access your club admin page. This will show you infographs of how your club is faring based on some information you input.
+
 
 # Milestone 1
 
