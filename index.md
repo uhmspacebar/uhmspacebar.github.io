@@ -367,7 +367,9 @@ We had 9 issues that were completed. The following are pictures of the pages tha
 
 - [Milestone 2](https://github.com/uhmspacebar/uhmspacebar/projects/2)
 
-For Milestone 2 we were required to finish the web application to include functionality and improve the software design process. We had definitely stepped it up a notch by increasing the amount of issues completed by the second milestone. We increased our production from 9 issues to 17 issues. 
+For Milestone 2 we were required to finish the web application to include functionality and improve the software design process. We had definitely stepped it up a notch by increasing the amount of issues completed by the second milestone. We increased our production from 9 issues to 16 issues. 
+
+![](images/milestone2.png)
 
 An example of our software design process is shown in the project network shown below.
 
