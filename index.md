@@ -121,6 +121,9 @@ imports/
     base/
     interest/
     profile/
+    club/
+    major/
+    event/
   startup/       # Define code to run when system starts up (client-only, server-only)
     client/        
     server/        
@@ -161,13 +164,18 @@ import '/imports/ui/layouts/landing';
 import '/imports/ui/layouts/shared';
 import '/imports/ui/layouts/user';
 import '/imports/ui/pages/directory';
-import '/imports/ui/pages/filter';
+import '/imports/ui/pages/browse';
 import '/imports/ui/pages/landing';
 import '/imports/ui/pages/user';
+import '/imports/ui/pages/clubregister';
+import '/imports/ui/pages/clubadmin';
+import '/imports/ui/stylesheets/style.css';
 import '/imports/api/base';
 import '/imports/api/profile';
 import '/imports/api/interest';
-import '/imports/ui/stylesheets/style.css';
+import '/imports/api/major';
+import '/imports/api/club';
+
 ```
 
 Apart from the last line that imports style.css directly, the other lines all invoke the index.js file in the specified directory.
@@ -274,41 +282,49 @@ meteor npm run test
 This outputs the results to the console. Here is an example of a successful run, with timestamps removed:
 
 ```
-[~/github/bowfolios/bowfolios/app]-> meteor npm run test
+kevincho@Kevins-MacBook-Pro-8  ~/uhmspacebar/app   master ●  meteor npm run test
 
-> bowfolios@ test /Users/philipjohnson/github/bowfolios/bowfolios/app
-> TEST_WATCH=1 meteor test --driver-package meteortesting:mocha
+> uhmspacebar@ test /Users/kevincho/uhmspacebar/app
+> cross-env TEST_WATCH=1 meteor test --driver-package meteortesting:mocha
 
-[[[[[ Tests ]]]]]                             
+[[[[[ Tests ]]]]]
 
-=> Started proxy.                             
-=> Started MongoDB.  
-                         
-(STDERR) Note: you are using a pure-JavaScript implementation of bcrypt.
-(STDERR) While this implementation will work correctly, it is known to be
-(STDERR) approximately three times slower than the native implementation.
-(STDERR) In order to use the native implementation instead, run
-(STDERR) 
-(STDERR)   meteor npm install --save bcrypt
-(STDERR) 
-(STDERR) in the root directory of your application.
-
- --------------------------------
- ----- RUNNING SERVER TESTS -----
- --------------------------------
-   
+=> Started proxy.
+=> A patch (Meteor 1.5.4) for your current release is available!
+   Update this project now with 'meteor update --patch'.
+=> Started MongoDB.
+I20171213-22:09:12.367(-10)?
+I20171213-22:09:12.473(-10)? --------------------------------
+I20171213-22:09:12.478(-10)? ----- RUNNING SERVER TESTS -----
+I20171213-22:09:12.480(-10)? --------------------------------
+I20171213-22:09:12.481(-10)?
+I20171213-22:09:12.482(-10)?
+I20171213-22:09:12.484(-10)?
+I20171213-22:09:12.490(-10)?   ClubCollection
 => Started your app.
 
 => App running at: http://localhost:3000/
-    InterestCollection
-    ✓ #define, #isDefined, #removeIt, #dumpOne, #restoreOne (69ms)
-    ✓ #findID, #findIDs  
-    ProfileCollection
-    ✓ #define, #isDefined, #removeIt, #dumpOne, #restoreOne (66ms)
+    1) #define, #isDefined, #removeIt, #dumpOne, #restoreOne
+I20171213-22:09:12.508(-10)?
+I20171213-22:09:12.510(-10)?   EventCollection
+    2) #define, #isDefined, #removeIt, #dumpOne, #restoreOne
+    3) #findID, #findIDs10)?
+I20171213-22:09:12.513(-10)?
+I20171213-22:09:12.514(-10)?   InterestCollection
+    ✓ #define, #isDefined, #removeIt, #dumpOne, #restoreOne (67ms)
+    ✓ #findID, #findIDs-10)?
+I20171213-22:09:12.516(-10)?
+I20171213-22:09:12.517(-10)?   MajorCollection
+    ✓ #define, #isDefined, #removeIt, #dumpOne, #restoreOne (62ms)
+    ✓ #findID, #findIDs-10)?
+I20171213-22:09:12.519(-10)?
+I20171213-22:09:12.520(-10)?   ProfileCollection
+    4) #define, #isDefined, #removeIt, #dumpOne, #restoreOne
     ✓ #define (illegal interest)
     ✓ #define (duplicate interests)
-
-   5 passing (178ms)
+I20171213-22:09:12.523(-10)?
+I20171213-22:09:12.524(-10)?
+I20171213-22:09:12.524(-10)?   6 passing (466ms)
 
 Load the app in a browser to run client tests, or set the TEST_BROWSER_DRIVER environment variable. See https://github.com/DispatchMe/meteor-mocha/blob/master/README.md#run-app-tests
 ```
@@ -353,8 +369,13 @@ We had 9 issues that were completed. The following are pictures of the pages tha
 
 For Milestone 2 we were required to finish the web application to include functionality and improve the software design process. We had definitely stepped it up a notch by increasing the amount of issues completed by the second milestone. We increased our production from 9 issues to 17 issues. 
 
+An example of our software design process is shown in the project network shown below.
 
-Hello.
+![](images/networkgithub.png)
+
+As shown in the image above, we were succesfully able to implement software engineering techniques to build our web application. We created branches based on the issue we were working on and methodically merged the branches back into master. This way we are able to preserve a working version on our master branch and allow for new development on other branches.
+
+The pages done for milestone two can be shown above since it is the final product for the class.
 
 
 #Known Bugs and Issues
@@ -380,6 +401,7 @@ The application was tried by the following five people: Jaimie Obatake, Kyle Cha
 ### Good Feedback
 * Straight forward application, easy to see how to traverse 
 * Good design. Catches the eye
+* Liked the blinking spacebar logo and moving earth background
 
 ### Needs Improvement
 Overall there was one complaint that was made.
