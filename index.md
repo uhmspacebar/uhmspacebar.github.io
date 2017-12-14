@@ -390,7 +390,7 @@ As shown in the image above, we were succesfully able to implement software engi
 The pages done for milestone two can be shown above since it is the final product for the class.
 
 
-#Known Bugs and Issues
+# Known Bugs and Issues
 
 Some known bugs that we have with our application reside in the club admin page. We were unable to get accessing member information due to the lack of time. We were also not able to display any club information or allow users to add new events which should be done on the club admin page. Most of the time was spent trying to wire the form and the page together which took away some of the key functionality of this page.
 
@@ -402,11 +402,11 @@ We also found out that by having the page reload Safari is unable to access the 
 
 Another issue that was found was that the video playing on the landing page will not load in Google Chrome Canary. The video is able to load on Google Chrome and Safari so there may be no concern for most users.
 
-#Future Features
+# Future Features
 
 If time is permitting, it would be nice to add the remaining functionality left for the profile page and the admin page.
 
-#Community Feedback
+# Community Feedback
 
 The application was tried by the following five people: Jaimie Obatake, Kyle Chan, Jonathan Lau, Arnold Shek, and Akira Vernon. The following comments were made.
 
@@ -422,11 +422,11 @@ Overall there was one complaint that was made.
 
 As a response to this comment, we had fixed the user bar to show labels on hover which was done in [Issue 42](https://github.com/uhmspacebar/uhmspacebar/issues/42)
 
-#Special Thanks
+# Special Thanks
 
 Special thanks to Dr. Phillip Johnson for providing us with the base code Bowfolios. Without this framework, we would not have been able to complete the project. We also thank the creators of Chart.js. 
 
-#Contact Us
+# Contact Us
 Developers of UHM Spacebar: Kevin Cho, Jonathan Nguyen, Aaron Nonaka, Paulo Lemus
 
 Email: chokevin@hawaii.edu / / /
