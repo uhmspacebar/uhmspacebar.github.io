@@ -33,12 +33,12 @@ layout: default
 
 [UHM Spacebar](http://uhmspacebar.meteorapp.com) is how University of Hawaii at Manoa students can get connected with any RIO/non-RIO club on campus. When accessing the meteor application, the following landing page appears:
 
-#Functionality
+# Functionality
 
 UHM Spacebar brings together clubs across campus to circulate information to the public. People who are interested in clubs and club owners can create profiles. Users are able to find clubs and filter based on major or interest. Clubs are able to see who is interested and advertise events that are coming u. This makes sure that people understand more ways of getting involved around campus. 
 [Landing Page](http://uhmspacebar.meteorapp.com)
 
-#How to use UHM SpaceBar
+# How to use UHM SpaceBar
 ![](images/landingPage.jpg)
 
 We will be providing UHM members the ability to login through CAS login. After authenticating the UH login the user is then prompted to make a user profile
@@ -221,12 +221,15 @@ For display and navigation among its four pages, the application uses [Flow Rout
 
 Routing is defined in [imports/startup/client/router.js](https://github.com/ics-software-engineering/meteor-application-template/blob/master/app/imports/startup/client/router.js).
 
-BowFolios defines the following routes:
+UHM SpaceBar defines the following routes:
 
   * The `/` route goes to the public landing page.
   * The `/directory` route goes to the public directory page.
   * The `/<user>/profile` route goes to the profile page associated with `<user>`, which is the UH account name.
   * The `/<user>/filter` route goes to the filter page associated with `<user>`, which is the UH account name.
+  * The `/<user>/clubregister`, which is the club register form for new clubs
+  * The `/<user>/clubadmin`, which is the admin page that allows a user to interact with their club register.
+  
 
 
 ## Authentication
