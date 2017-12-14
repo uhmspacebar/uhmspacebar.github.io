@@ -322,40 +322,61 @@ The following section will outline the work that was done for both milestones.
 # Milestone 1
 - [Milestone 1](https://github.com/uhmspacebar/uhmspacebar/projects/1)
 
+This is what we had turned in for milestone one. Milestone one had included creating basic design mock ups of what we wanted our website to look like. This did not include any backend wiring and it was just to show case what the potential final product would look like.
+
+Our project page on Github looked like the following: 
+![](images/milestone1.png)
+
+We had 9 issues that were completed. The following are pictures of the pages that we had completed at the time.
+
+
 [Profile Page](http://uhmspacebar.meteorapp.com/nn4/profile)
 ![](images/userprofilemock.jpg)
 
-This is what a standard user profile will look like after creating. They will be able to have a feed of upcoming events for clubs that they add to their watchlist and can filter the upcoming events based on club. It will also show a description of the events. They are also able to edit any of their information here. 
 
 [Filter Page](http://uhmspacebar.meteorapp.com/nn4/filter)
 ![](images/filterpagemock.jpg)
 
-We will also provide users to find new clubs that they are interested in. We will show various club options on the left side of the screen and allow users to filter based on personal preferences. Each club will have a json value associated with their name (string comparison), club type, club size, and major affiliation (macro values).
 
 [Club Register](http://uhmspacebar.meteorapp.com/nn4/Club_Register)
 ![](images/registerpagemock.jpg)
 
-For new or existing clubs that would like to sign up on UHMSpaceBar, they can access the Register New Club page. This will prompt them with a form to fill out. This will add new clubs to the database. There are a few fields in the register period in attempt to reduce friction of onboarding. Users can/will be prompted to add more personalization while using the web application.
+
 
 [Club Admin Page](http://uhmspacebar.meteorapp.com/nn4/Club_Admin)
 ![](images/clubadminpage.png)
-
-After you register you are able to access your club admin page. This will show you infographs of how your club is faring based on some information you input.
 
 
 # Milestone 2
 
 - [Milestone 2](https://github.com/uhmspacebar/uhmspacebar/projects/2)
 
+For Milestone 2 we were required to finish the web application to include functionality and improve the software design process. We had definitely stepped it up a notch by increasing the amount of issues completed by the second milestone. We increased our production from 9 issues to 17 issues. 
+
+
 Hello.
 
 
 #Known Bugs and Issues
 
+Some known bugs that we have with our application reside in the club admin page. We were unable to get accessing member information due to the lack of time. We were also not able to display any club information or allow users to add new events which should be done on the club admin page. Most of the time was spent trying to wire the form and the page together which took away some of the key functionality of this page.
+
+Also the profile page should have more information on it but again we were unable to get to that part of the project. There should be a feed that shows any upcoming events for clubs that a user is a part of. 
+
+One bug that we ran into was the fact that Chart.js does not like to rerender when we leave a template. Currently we have Meteor render Chart.js through the Template onRendered function. However, when navigating away from the project and returning the template will not rerun the onRendered function and the DOM won't be manipulated. As a quick fix the user experience will auto-refresh the page. This is bad because it creates latency within the product, yet currently this is unavoidable.
+
 #Future Features
+
+If time is permitting, it would be nice to add the remaining functionality left for the profile page and the admin page.
 
 #Community Feedback
 
+The application was tried by the following five people: Jaimie Obatake, Kyle Chan, Jonathan Lau, Arnold Shek, and Akira Vernon. The following comments were made.
+
+### Good Feedback
+
+
+### Needs improvement
 
 #Special Thanks
 
