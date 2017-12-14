@@ -334,6 +334,16 @@ Load the app in a browser to run client tests, or set the TEST_BROWSER_DRIVER en
 The following section will outline the work that was done for both milestones.
 
 # Mock ups
+Here are the mock ups that Kevin Cho drew on 11/08/17 for the overall layout of the project. Most of the design that was laid out in the initial mock up made it to the final design which shows how much time we spent planning our design.
+
+![](images/archive/landingpagemock.jpg)
+
+![](images/archive/userprofilemock.jpg)
+
+![](images/archive/filterpagemock.jpg)
+
+![](images/archive/registerpagemock.jpg)
+
 
 # Milestone 1
 - [Milestone 1](https://github.com/uhmspacebar/uhmspacebar/projects/1)
