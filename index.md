@@ -22,6 +22,10 @@ layout: default
   - [Mock Ups](#mock-ups)
   - [Milestone 1](#milestone-1)
   - [Milestone 2](#milestone-2)
+- [Known Bugs and Issues](#known-bugs-and-issues)
+- [Future Features](#future-features)
+- [Special Thanks](#special-thanks)
+- [Contact Us](#contact-us)
 
 
 
@@ -339,8 +343,23 @@ For new or existing clubs that would like to sign up on UHMSpaceBar, they can ac
 After you register you are able to access your club admin page. This will show you infographs of how your club is faring based on some information you input.
 
 
-# Milestone 1
+# Milestone 2
 
 - [Milestone 2](https://github.com/uhmspacebar/uhmspacebar/projects/2)
 
 Hello.
+
+
+#Known Bugs and Issues
+
+#Future Features
+
+#Community Feedback
+
+
+#Special Thanks
+
+#Contact Us
+Developers of UHM Spacebar: Kevin Cho, Jonathan Nguyen, Aaron Nonaka, Paulo Lemus
+
+Email: chokevin@hawaii.edu / / /
