@@ -3,16 +3,37 @@ layout: default
 ---
 # Table of contents
 
-* [About UHM SpaceBar](#about-uhmspacebar)
-* [Installation](#installation)
-* [Milestones](#milestones)
+- [About UHM SpaceBar](#about-uhmspacebar) 
+  - [Functionality](#Functionality)
+- [How to Use UHM Spacebar](#How-to-use-UHM-SpaceBar)
+- [Installation](#installation)
+  - [Directory Structure](#Directory-Structure)
+  - [Import Conventions](#Import-conventions)
+  - [Naming Conventions](#Naming-conventions)
+  - [Data Models](#Data-Models)
+  - [CSS](#CSS)
+  - [Routing](#Routing)
+  - [Authentication](#Authentication)
+  - [Configuration](#Configuration)
+  - [Quality Assurance](#Quality-assurance)
+    - [ESLint](#eslint)
+    - [Data Models Unit Tests](#Data-models-unit-tests)
+- [Milestones](#milestones)
+  - [Milestone 1](#milestone-1)
+  - [Milestone 2](#milestone-2)
+
+
 
 # About UHMSpaceBar
 
 [UHM Spacebar](http://uhmspacebar.meteorapp.com) is how University of Hawaii at Manoa students can get connected with any RIO/non-RIO club on campus. When accessing the meteor application, the following landing page appears:
 
+#Functionality
+
+UHM Spacebar brings together clubs across campus to circulate information to the public. People who are interested in clubs and club owners can create profiles. Users are able to find clubs and filter based on major or interest. Clubs are able to see who is interested and advertise events that are coming u. This makes sure that people understand more ways of getting involved around campus. 
 [Landing Page](http://uhmspacebar.meteorapp.com)
 
+#How to use UHM SpaceBar
 ![](images/landingPage.jpg)
 
 We will be providing UHM members the ability to login through CAS login. After authenticating the UH login the user is then prompted to make a user profile
@@ -152,15 +173,15 @@ This system adopts the following naming conventions:
 
 ## Data model
 
-The BowFolios data model is implemented by two Javascript classes: [ProfileCollection](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/profile/ProfileCollection.js) and [InterestCollection](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/interest/InterestCollection.js). Both of these classes encapsulate a MongoDB collection with the same name and export a single variable (Profiles and Interests)that provides access to that collection. 
+The UHM SpaceBar data model is implemented by four Javascript classes: [ProfileCollection](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/profile/ProfileCollection.js), [InterestCollection](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/interest/InterestCollection.js), [MajorCollection](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/interest/InterestCollection.js), and [EventCollection](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/interest/InterestCollection.js). All of these classes encapsulate a MongoDB collection with the same name and export a single variable (Profiles, Interests, Majors, and Events )that provides access to that collection. 
 
-Any part of the system that manipulates the BowFolios data model imports the Profiles or Interests variable, and invokes methods of that class to get or set data.
+Any part of the system that manipulates the UHM SpaceBar data model imports the various collection variable, and invokes methods of that class to get or set data.
 
-There are many common operations on MongoDB collections. To simplify the implementation, the ProfileCollection and InterestCollection classes inherit from the [BaseCollection](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/base/BaseCollection.js) class.
+There are many common operations on MongoDB collections. To simplify the implementation, all collections created for UHM SpaceBar inherit from the [BaseCollection](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/base/BaseCollection.js) class.
 
 The [BaseUtilities](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/base/BaseUtilities.js) file contains functions that operate across both classes. 
 
-Both ProfileCollection and InterestCollection have Mocha unit tests in [ProfileCollection.test.js](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/profile/ProfileCollection.test.js) and [InterestCollection.test.js](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/interest/InterestCollection.test.js). See the section below on testing for more details.
+Each collection created for this project have Mocha unit tests in [ProfileCollection.test.js](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/profile/ProfileCollection.test.js) and [InterestCollection.test.js](https://github.com/bowfolios/bowfolios/blob/master/app/imports/api/interest/InterestCollection.test.js). See the section below on testing for more details.
 
 ## CSS
 
@@ -194,9 +215,11 @@ Anyone with a UH account can login and use BowFolio to create a portfolio.  A pr
 
 ## Authorization
 
-The landing and directory pages are public; anyone can access those pages.
+When a user first logs in to the application the only page they are able to access is the profile creation page. This is because most of the application will be restricted to creating a specific user profile within the applcation. Information such as the user's major, profile image, and interests are important in creating a user profile rather than just a user name. 
 
-The profile and filter pages require authorization: you must be logged in (i.e. authenticated) through the UH test CAS server, and the authenticated username returned by CAS must match the username specified in the URL.  So, for example, only the authenticated user `johnson` can access the pages `http://localhost:3000/johnson/profile` and  `http://localhost:3000/johnson/filter`.
+After creating a user profile, a user has access to the filter page and the club creation page as outlined above. The club admin page requires another authorization as you need to create a club first. Create a club should also have another layer of authentication; however, we did not get to implementing an admin page.
+
+All pages require authentication through CAS. Thankfully the originally Bowfolios that this application used as its base application had a working UHM CAS login that we could use to filter users to UH students.
 
 To prevent people from accessing pages they are not authorized to visit, template-based authorization is used following the recommendations in [Implementing Auth Logic and Permissions](https://kadira.io/academy/meteor-routing-guide/content/implementing-auth-logic-and-permissions). 
 
@@ -208,13 +231,13 @@ The [config](https://github.com/bowfolios/bowfolios/tree/master/config) director
 
 The [.gitignore](https://github.com/bowfolios/bowfolios/blob/master/.gitignore) file prevents a file named settings.production.json from being committed to the repository. So, if you are deploying the application, you can put settings in a file named settings.production.json and it will not be committed.
 
-BowFolios checks on startup to see if it has an empty database in [initialize-database.js](https://github.com/bowfolios/bowfolios/blob/master/app/imports/startup/server/initialize-database.js), and if so, loads the file specified in the configuration file, such as [settings.development.json](https://github.com/bowfolios/bowfolios/blob/master/config/settings.development.json).  For development purposes, a sample initialization for this database is in [initial-collection-data.json](https://github.com/bowfolios/bowfolios/blob/master/app/private/database/initial-collection-data.json).
+UHM SpaceBar checks on startup to see if it has an empty database in [initialize-database.js](https://github.com/bowfolios/bowfolios/blob/master/app/imports/startup/server/initialize-database.js), and if so, loads the file specified in the configuration file, such as [settings.development.json](https://github.com/bowfolios/bowfolios/blob/master/config/settings.development.json).  For development purposes, a sample initialization for this database is in [initial-collection-data.json](https://github.com/bowfolios/bowfolios/blob/master/app/private/database/initial-collection-data.json).
 
 ## Quality Assurance
 
 ### ESLint
 
-BowFolios includes a [.eslintrc](https://github.com/bowfolios/bowfolios/blob/master/app/.eslintrc) file to define the coding style adhered to in this application. You can invoke ESLint from the command line as follows:
+UHM Spacebar includes a [.eslintrc](https://github.com/bowfolios/bowfolios/blob/master/app/.eslintrc) file to define the coding style adhered to in this application. You can invoke ESLint from the command line as follows:
 
 ```
 meteor npm run lint
@@ -276,6 +299,15 @@ Load the app in a browser to run client tests, or set the TEST_BROWSER_DRIVER en
 
 
 # Milestones
+The following section will outline the work that was done for both milestones.
+
+# Milestone 1
 - [Milestone 1](https://github.com/uhmspacebar/uhmspacebar/projects/1)
 
+Hello.
+
+# Milestone 1
+
 - [Milestone 2](https://github.com/uhmspacebar/uhmspacebar/projects/2)
+
+Hello.
